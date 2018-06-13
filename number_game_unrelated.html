@@ -1,0 +1,106 @@
+<!-- Good Reference Examples: -->
+<!-- 34-QuestionGame -->
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Psychic Game</title>
+</head>
+
+<body>
+
+  <h1>Psychic Game!</h1>
+
+  <p>Guess what letter I'm thinking of</p>
+  <p>Wins: (# of times the user has guessed the letter correctly)</p>
+  <p>Losses: (# of times the user has failed to guess the letter correctly after exhausting all guesses)</p>
+  <p>Guesses Left: (# of guesses left. This will update)</p>
+  <p>Your Guesses So Far: (the specific letters that the user typed. Display these until the user either wins or loses.)</p>
+
+
+  ***SEMI-PSEUDOCODE FOR GAME SCRIPTING***
+  <ol>
+    <!-- This is the number that we need to guess -->
+    <li>Create secretNumber</li>
+    <li>Ask User for their Guess</li>
+    <li>Check if the Guess is Correct</li>
+    <li>If the Guess is not Correct, Check if the Guess is Higher</li>
+    <li>Otherwise, Check if the Guess is Lower</li>
+  </ol>
+
+  <!--
+  <p id="score"></p>
+  <p id="question"></p>
+-->
+
+
+
+
+  <script>
+
+    // VARIABLES
+    // ==========================================================================
+
+    var userGuess //Your Guess
+    var answer //Computer Guess
+    var guessCount = 0 //Tracks Guesses
+
+    //Function to get the number and check
+    var guess = function()
+    {
+      userGuess = prompt("Which letter am I thinking...?!");
+      guessCount++
+      check();
+    }
+
+    //Function to check the guess
+    var check = function()
+    {
+      if (userGuess == answer)
+      {
+        alert("You win!!! You guessed the correct number!");
+        alert("You used "+guessCount+ " guesses!");
+      }
+      if (userGuess > answer)
+      {
+        alert("Your guess is too HIGH, please try again.");
+        guess();
+      }
+      if (userGuess < answer)
+      {
+        alert("Your guess is too LOW, please try again.");
+        guess();
+      }
+      else
+      {
+        alert("That is not correct, please try again!");
+        guess();
+      }
+    }
+
+    //Game start - Ask User's Name and Introduce/Invite to Game
+    var userName= prompt("Please enter your name");
+    var initialQuestion = confirm("Greetings "+userName+", would you like to play a guessing game?");
+    if(initialQuestion === true)
+    {
+      alert(userName+", You will be guessing the letter of the alphabet that I am thinking of, and you will have 5 guesses to do so.");
+      alert("If you don't guess the correct letter in 5 guesses, you lose, " +userName);
+      var answer = Math.floor(Math.random()*10)+1; //Currently, this will just give us 10 possible numbers to guess
+      guess();
+    }
+    else
+    {
+      alert("That's too bad, " +userName+ ". Maybe next time.");
+      window.open('','_self').close();
+    }
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

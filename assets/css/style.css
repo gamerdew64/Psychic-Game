@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background: #F9F9F9;
+  animation: color-me-in 40s; /* time it takes for the complete animation to complete */
+  animation-iteration-count: 100; /* will continue for roughly one hour */
+  }
+
+#game {
+  background: #F9F9F9;
+  margin-right: 60%;
+  padding:15px 60px 15px 60px;
+  }
+
+/* Start background animation section*/
+@keyframes color-me-in {
+  /* Starts with base color --- step 1 */
+  0% {
+    background: #5199A8;
+  }
+  /* Begins transition to next color at 10% */
+  10% {
+    background: #07A3B2;
+  }
+  /* Begins transition to next color at 20% */
+  20% {
+    background: #055F65;
+  }
+  /* Begins transition to next color at 30% */
+  30% {
+    background: #E47446;
+  }
+  /* Begins transition to next color at 40% */
+  40% {
+    background: #8E3843;
+  }
+  /* Begins transition to next color at 50% */
+  50% {
+    background: #134913;
+  }
+  /* Begins transition to next color at 60% */
+  60% {
+    background: #E9B704;
+  }
+  /* Begins transition to next color at 70% */
+  70% {
+    background: #82486B;
+  }
+  /* Begins transition to next color at 80% */
+  80% {
+    background: #FFCCFF;
+  }
+  /* Begins transition to next color at 90% */
+  90% {
+    background: #134913;
+  }
+  /* Begins transition to next color at 100% and completes sequence --- step 4 */
+  100% {
+    background: #FFFFCC;
+  }
+}
+/*End background animation section */
