@@ -17,7 +17,7 @@
   var userName= prompt("Please enter your name");
   // Both of these alert messages generate after the user enters their name, and it pipes the value into the message.
   alert("Greetings "+userName+", you will be playing the Psychic Guessing Game!");
-  alert(userName+", You will be guessing the letter of the alphabet that I am thinking of, and you will have 12 guesses to do so. If you don't guess the correct letter in 12 guesses, you lose.");
+  alert(userName+", You will be guessing the letter of the alphabet that I am thinking of, and you will have 9 guesses to do so. If you don't guess the correct letter in 9 guesses, you lose.");
   // We are creating a new variable called "computerLetter" and we are storing the randomly chosen letter from the length of the letters array
   var computerLetter = letters[Math.floor(Math.random() * letters.length)];
   // Added a console.log to display out to the console the letter that the computer picked
@@ -47,7 +47,7 @@
       console.log("The computer has now picked " +computerLetter);
     }
 
-    // if the remainingGuesses equal 0, then losses will be incremented, the user will be alterted that they have run out of guesses, remaining guesses and will be reset to 12 and the currentGuesses array will be emptied.
+    // if the remainingGuesses equal 0, then losses will be incremented, the user will be alterted that they have run out of guesses, remaining guesses and will be reset and the currentGuesses array will be emptied.
     // The computer will randomly pick a new number
     if (remainingGuesses == 0) {
       losses++;
