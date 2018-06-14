@@ -1,6 +1,6 @@
 # Psychic-Game
 
-This is a Psychic guessing game in which the user will have up to 12 guesses to guess a random number chosen by the computer.
+This is a Psychic guessing game in which the user will have up to 9 guesses to guess a random number chosen by the computer.
 
 The user will be prompted to enter their name, and then they will be introdued to the game in several alert messages.
 
