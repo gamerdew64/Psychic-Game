@@ -2,13 +2,16 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   background: #F9F9F9;
   animation: color-me-in 40s; /* time it takes for the complete animation to complete */
-  animation-iteration-count: 100; /* will continue for roughly one hour */
+  animation-iteration-count: 25; /* will continue for roughly 15 minutes or so */
   }
 
 #game {
   background: #F9F9F9;
-  margin-right: 60%;
+  width: 30%;
+  /* margin-right: 60%; */
   padding:15px 60px 15px 60px;
+  animation-duration: 3s;
+  animation-name: slidein;
   }
 
 /* Start background animation section*/
@@ -56,6 +59,23 @@ body {
   /* Begins transition to next color at 100% and completes sequence --- step 4 */
   100% {
     background: #FFFFCC;
+  }
+}
+
+/* This is the animation of the game window (#game) moving from off screen to its position on the left side of the page */
+@keyframes slidein {
+  from {
+    background: #C50D63;
+    margin-left: 100%;
+    width: 300%;
+    padding:15px 60px 15px 60px;
+  }
+
+  to {
+    background: #07A3B2;
+    margin-left: 0%;
+    width: 30%;
+    padding:15px 60px 15px 60px;
   }
 }
 /*End background animation section */
